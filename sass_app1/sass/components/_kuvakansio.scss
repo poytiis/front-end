@@ -1,0 +1,33 @@
+.kuvakansio{
+  position: relative;
+  &_kuva{
+    width: 55%;
+    box-shadow: 0 15px 40px rgba($musta, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2;
+    outline-offset: 20px;
+
+
+    &_1{
+      left: 0;
+      top: -20px;
+    }
+    &_2{
+      right: 0;
+      top: 20px;
+    }
+    &_3{
+      left: 20%;
+      top: 100px;
+    }
+    &:hover{
+      z-index: 20;
+      transform: scale(1.05) translateY(-2px);
+      outline: 15px solid $vihrea1;
+    }
+  
+  }
+
+}

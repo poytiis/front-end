@@ -1,0 +1,55 @@
+.header{
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 131, 0.8)),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path:polygon(0 0,100% 0,100% 75vh, 0 100%);
+  position:relative;
+
+  &_logo{
+    position: absolute;
+    top: 40px;
+    left:40px;
+
+    &_kuva{
+      height: 35px;
+    }
+  }
+  &_teksti_laatikko{
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  &_teksti{
+    color: $valkoinen;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+
+  }
+  &_main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: tuovasemmalta;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &_ala{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: tuo_oikealta;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+  }
+}

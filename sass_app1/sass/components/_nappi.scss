@@ -1,0 +1,83 @@
+.nappi{
+  &,
+  &:link,
+  &:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+  }
+  &:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($musta,0.2);
+    &::after{
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  &:active,
+  &:focus{
+    outline: none;
+    transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba($musta,0.2);
+  }
+  &::after{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+
+  }
+
+  &_valk{
+     background-color: $valkoinen;
+     color:$harmaa;
+     &::after{
+       background-color: $valkoinen;
+     }
+   }
+  &_vih{
+    background-color: $vihrea2;
+    color: $valkoinen;
+    &::after{
+      background-color: $vihrea2;
+    }
+  }
+  &_animaatio{
+    animation: tuo_alhaalta 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+  }
+}
+.nappi_teksti{
+  &:link,
+  &:visited{
+    color:$vihrea1;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $vihrea1;
+    padding: 3px;
+    font-size: 16px;
+    transition: all 0.2s;
+  }
+  &:hover{
+    background-color: $vihrea1;
+    color: $valkoinen;
+    box-shadow: 0 1px, 2px rgba($musta, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active{
+
+  }
+}

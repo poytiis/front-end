@@ -1,0 +1,615 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px; }
+
+@keyframes tuovasemmalta {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes tuo_oikealta {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes tuo_alhaalta {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+.u_keskita_teksti {
+  text-align: center; }
+
+.u_margin_alas_suuri {
+  margin-bottom: 80px; }
+
+.u_margin_alas_pieni {
+  margin-bottom: 15px; }
+
+.u_margin_ylos_suuri {
+  margin-top: 80px; }
+
+.otsikko_3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.palsta {
+  font-size: 16px; }
+  .palsta:not(:last-child) {
+    margin-bottom: 30px; }
+
+.section_about {
+  background-color: #f7f7f7;
+  padding: 250px 0;
+  margin-top: -20vh; }
+
+.otsikko_2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b483);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s; }
+  .otsikko_2:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 5px, 10px, 20px rgba(0, 0, 0, 0.2); }
+
+.section_ominaisuudet {
+  padding: 200px 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  margin-top: -100px;
+  transform: skewY(-7deg); }
+  .section_ominaisuudet > * {
+    transform: skewY(7deg); }
+
+.section_matkat {
+  background-color: #f7f7f7;
+  padding: 250px 0 150px 0;
+  margin-top: -100px; }
+
+.section_palaute {
+  padding: 150px 0;
+  position: relative; }
+
+.section_varaus {
+  padding: 150px 0;
+  background-image: linear-gradient(to right bottom, #55c57a, #7ed56f); }
+
+.varaus {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 50%), url("../img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  height: 500px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
+  .varaus_form {
+    padding: 60px;
+    width: 50%; }
+
+.nappi, .nappi:link, .nappi:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  border: none;
+  cursor: pointer; }
+.nappi:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .nappi:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
+.nappi:active, .nappi:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+.nappi::after {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+.nappi_valk {
+  background-color: #fff;
+  color: #777; }
+  .nappi_valk::after {
+    background-color: #fff; }
+.nappi_vih {
+  background-color: #7ed56f;
+  color: #fff; }
+  .nappi_vih::after {
+    background-color: #7ed56f; }
+.nappi_animaatio {
+  animation: tuo_alhaalta 0.5s ease-out 0.75;
+  animation-fill-mode: backwards; }
+
+.nappi_teksti:link, .nappi_teksti:visited {
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  font-size: 16px;
+  transition: all 0.2s; }
+.nappi_teksti:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1px, 2px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header_logo {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+    .header_logo_kuva {
+      height: 35px; }
+  .header_teksti_laatikko {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header_teksti {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px; }
+  .header_main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: tuovasemmalta;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .header_ala {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: tuo_oikealta;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 60px; }
+  .row .col-1-of-2 {
+    width: calc((100% - 60px)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 60px)/3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 60px)/3) + 60px); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 60px)/4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 60px)/4) + 60px); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 60px)/4) + 2* 60px); }
+
+.kuvakansio {
+  position: relative; }
+  .kuvakansio_kuva {
+    width: 55%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2;
+    outline-offset: 20px; }
+    .kuvakansio_kuva_1 {
+      left: 0;
+      top: -20px; }
+    .kuvakansio_kuva_2 {
+      right: 0;
+      top: 20px; }
+    .kuvakansio_kuva_3 {
+      left: 20%;
+      top: 100px; }
+    .kuvakansio_kuva:hover {
+      z-index: 20;
+      transform: scale(1.05) translateY(-2px);
+      outline: 15px solid #55c57a; }
+
+.ominaisuus_laatikko {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0, 15px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s; }
+  .ominaisuus_laatikko_icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b483);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .ominaisuus_laatikko:hover {
+    transform: scaleY(-15px) scale(1.03); }
+
+.matka_kortti {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
+  height: 500px; }
+  .matka_kortti_puoli {
+    background-color: red;
+    height: 500px;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); }
+    .matka_kortti_puoli_etupuoli {
+      background-color: #fff; }
+    .matka_kortti_puoli_takapuoli {
+      transform: rotateY(180deg); }
+      .matka_kortti_puoli_takapuoli_1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7738); }
+      .matka_kortti_puoli_takapuoli_2 {
+        background-image: linear-gradient(to right bottom, #55c57a, #7ed56f); }
+      .matka_kortti_puoli_takapuoli_3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .matka_kortti:hover .matka_kortti_puoli_etupuoli {
+    transform: rotateY(-180deg); }
+  .matka_kortti:hover .matka_kortti_puoli_takapuoli {
+    transform: rotateY(0); }
+  .matka_kortti_kuva {
+    background-size: cover;
+    height: 230px;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .matka_kortti_kuva_1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7738), url(../img/nat-5.jpg); }
+    .matka_kortti_kuva_2 {
+      background-image: linear-gradient(to right bottom, #55c57a, #7ed56f), url(../img/nat-6.jpg); }
+    .matka_kortti_kuva_3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .matka_kortti_otsikko {
+    font-size: 28px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    text-align: right;
+    width: 75%; }
+  .matka_kortti_otsikko_span {
+    padding: 10px 15px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .matka_kortti_otsikko_span_1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 56, 0.8)); }
+    .matka_kortti_otsikko_span_2 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)); }
+    .matka_kortti_otsikko_span_3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .matka_kortti_tiedot {
+    padding: 30px; }
+    .matka_kortti_tiedot ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .matka_kortti_tiedot ul li {
+        text-align: center;
+        font-size: 15px;
+        padding: 10px; }
+        .matka_kortti_tiedot ul li:not(:last-child) {
+          border-bottom: 1px solid #f7f7f7; }
+  .matka_kortti_taka {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .matka_kortti_hinta_box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px; }
+  .matka_kortti_hinta_info {
+    font-size: 14px;
+    text-transform: uppercase; }
+  .matka_kortti_hinta_arvo {
+    font-size: 60px;
+    font-weight: 100; }
+
+.palaute {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 30px 60 px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 60px;
+  padding-left: 90px;
+  font-size: 16px;
+  transform: skewX(-12deg); }
+  .palaute_muoto {
+    width: 150px;
+    height: 150px;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-30px) skewX(12deg);
+    position: relative; }
+  .palaute_kuva {
+    height: 100%;
+    transform: translateX(-40px) scale(1.4);
+    backface-visibility: hidden; }
+  .palaute_teksti {
+    transform: skewX(12deg); }
+  .palaute_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.2s;
+    backface-visibility: hidden; }
+  .palaute:hover .palaute_caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .palaute:hover .palaute_kuva {
+    transform: scale(1) translateX(-40px);
+    filter: blur(3px); }
+
+.taustavideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2; }
+  .taustavideo_video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.form_input {
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-family: "Lato", sans-serif;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block; }
+  .form_input::-webkit-input-placeholder {
+    color: #999; }
+  .form_input:focus {
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #55c57a; }
+  .form_input:focus:invalid {
+    border-bottom: 3px solid #ff7738; }
+.form_label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-top: 7px;
+  display: block;
+  transition: all 0.3s; }
+.form_ryhma:not(:last-child) {
+  margin-bottom: 20px; }
+.form_input:placeholder-shown + .form_label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-40px); }
+.form_radio_ryhma {
+  width: 49%;
+  display: inline-block; }
+.form_radio_input {
+  display: none; }
+.form_radio_label {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 45px; }
+.form_radio_nappi {
+  height: 30px;
+  width: 30px;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -4px; }
+  .form_radio_nappi::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    background-color: #55c57a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s; }
+.form_radio_input:checked ~ .form_radio_label .form_radio_nappi::after {
+  opacity: 1; }
+
+.footer {
+  background-color: #333;
+  padding: 100px 0px;
+  font-size: 14px;
+  color: #f7f7f7; }
+  .footer_kuva_box {
+    text-align: center;
+    margin-bottom: 80px; }
+  .footer_kuva {
+    width: 150px;
+    height: auto; }
+  .footer_copyright {
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    width: 80%;
+    float: right; }
+  .footer_lista {
+    list-style: none; }
+  .footer_item {
+    display: inline-block; }
+    .footer_item:not(:last-child) {
+      margin-right: 15px; }
+  .footer_navigation {
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    display: inline-block; }
+  .footer_linkki:link, .footer_linkki:visited {
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block; }
+  .footer_linkki:hover, .footer_linkki:active {
+    color: #55c57a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); }
+
+.navigation_checkbox {
+  display: none; }
+.navigation_nappi {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: pointer; }
+.navigation_tausta {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  top: 65px;
+  right: 65px;
+  background-image: radial-gradient(#55c57a, #7ed56f);
+  z-index: 1000;
+  transition: all 0.8s cubic-bezier(0.58, 0.01, 0.58, 1); }
+.navigation_nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1500;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.58, 0.01, 0.58, 1); }
+.navigation_lista {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+.navigation_linkki:link, .navigation_linkki:visited {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 0.4s cubic-bezier(0.58, 0.01, 0.58, 1); }
+.navigation_linkki:hover, .navigation_linkki:active {
+  background-position: 100%;
+  color: #000;
+  transform: translateX(10px); }
+.navigation_checkbox:checked ~ .navigation_tausta {
+  transform: scale(70); }
+.navigation_checkbox:checked ~ .navigation_nav {
+  opacity: 1;
+  width: 100%; }
+.navigation_icon {
+  position: relative;
+  margin-top: 35px; }
+  .navigation_icon, .navigation_icon::after, .navigation_icon::before {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation_icon::after, .navigation_icon::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation_icon::before {
+    top: -8px; }
+  .navigation_icon:after {
+    top: 8px; }
+.navigation_nappi:hover .navigation_icon:before {
+  top: -10px; }
+.navigation_nappi:hover .navigation_icon:after {
+  top: 10px; }
+
+/*# sourceMappingURL=main.css.map */

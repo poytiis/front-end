@@ -1,0 +1,96 @@
+.form{
+  &_input{
+    font-size: 15px;
+    padding: 15px 20px;
+    border-radius: 2px;
+    background-color: rgba($valkoinen, 0.5);
+    border: none;
+    font-family: "Lato", sans-serif;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+
+
+    &::-webkit-input-placeholder{
+      color: $harmaa3;
+    }
+    &:focus{
+      outline: none;
+      box-shadow: 0 10px 20px rgba($musta,0.15);
+      border-bottom: 3px solid $vihrea1;
+
+    }
+    &:focus:invalid{
+      border-bottom: 3px solid $oranssi2;
+    }
+
+  }
+  &_label{
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 7px;
+    display: block;
+    transition: all 0.3s;
+
+  }
+  &_ryhma:not(:last-child){
+    margin-bottom: 20px;
+
+  }
+  &_input:placeholder-shown + &_label{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+
+  }
+
+  &_radio_ryhma{
+    width: 49%;
+    display: inline-block;
+  }
+  &_radio_input{
+    display: none;
+
+  }
+  &_radio_label{
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 45px;
+
+  }
+  &_radio_nappi{
+    height: 30px;
+    width: 30px;
+    border: 5px solid $vihrea1;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    //background-color: red;
+
+
+
+    &::after{
+      content: '';
+      display: block;
+      border-radius: 50%;
+      height: 13px;
+      width: 13px;
+      background-color: $vihrea1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+
+    }
+  }
+  &_radio_input:checked ~ &_radio_label &_radio_nappi::after{
+      opacity: 1;
+  }
+
+}

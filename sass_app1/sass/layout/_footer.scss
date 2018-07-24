@@ -1,0 +1,57 @@
+.footer{
+  background-color: $harmaa6;
+  padding: 100px 0px ;
+  font-size: 14px;
+  color: $harmaa2;
+
+  &_kuva_box{
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  &_kuva{
+    width: 150px;
+    height: auto;
+
+  }
+  &_copyright{
+    border-top: 1px solid $harmaa;
+    padding-top: 20px;
+    width: 80%;
+    float: right;
+  }
+  &_lista{
+    list-style: none;
+
+  }
+  &_item{
+    display: inline-block;
+
+    &:not(:last-child){
+      margin-right: 15px;
+
+    }
+  }
+  &_navigation{
+    border-top: 1px solid $harmaa;
+    padding-top: 20px;
+    display: inline-block;
+
+
+  }
+  &_linkki{
+    &:link,
+    &:visited{
+      color: $harmaa2;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+
+    }
+    &:hover,
+    &:active{
+      color: $vihrea1;
+      box-shadow: 0 10px 20px rgba($musta, 0.4);
+
+    }
+  }
+}

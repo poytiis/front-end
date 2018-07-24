@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACN,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,YAAa",
+"sources": ["palaute.scss"],
+"names": [],
+"file": "palaute.css"
+}
